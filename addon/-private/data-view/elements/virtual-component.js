@@ -50,13 +50,13 @@ export default class VirtualComponent {
     while (upperBound !== lowerBound) {
       upperBound = upperBound.nextSibling;
 
-      if (upperBound instanceof Element) {
+      if (upperBound instanceof HTMLElement) {
         top = Math.min(top, upperBound.getBoundingClientRect().top);
         bottom = Math.max(bottom, upperBound.getBoundingClientRect().bottom);
       }
 
       if (DEBUG) {
-        if (upperBound instanceof Element) {
+        if (upperBound instanceof HTMLElement) {
           continue;
         }
 
